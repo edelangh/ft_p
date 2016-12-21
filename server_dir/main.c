@@ -6,7 +6,7 @@
 /*   By: edelangh <edelangh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/25 15:32:37 by edelangh          #+#    #+#             */
-/*   Updated: 2016/12/21 18:01:13 by edelangh         ###   ########.fr       */
+/*   Updated: 2016/12/21 18:11:04 by edelangh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void	on_client(t_sock client, t_sockaddr_in sin, int addr_len)
 	{
 		error = NULL;
 		buf[len] = '\0';
-		dprintf(1, "'%s'\n", buf);
 		dprintf(1, "client %d : '%s'\n", client, buf);
 		tab = ft_splitcmd(buf);
 		if (cmd1(tab, client, &error, server_pwd))
